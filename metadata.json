@@ -1,0 +1,6 @@
+{
+  "name": "Açaí + Mais Expresso - Praia do Francês",
+  "description": "Cardápio Digital interativo do Açaí + Mais Expresso na Praia do Francês, Alagoas. Peça via WhatsApp ou iFood, monte seu açaí super cremoso sem glúten, sem lactose e sem xarope!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
