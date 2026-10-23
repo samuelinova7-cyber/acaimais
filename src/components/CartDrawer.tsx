@@ -40,7 +40,6 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   const [address, setAddress] = useState('');
   const [paymentMethod, setPaymentMethod] = useState<'pix' | 'cartao' | 'dinheiro'>('pix');
   const [needChange, setNeedChange] = useState('');
-  const [phoneTarget, setPhoneTarget] = useState<'82' | '45'>('82');
   const drawerHeadingId = useId();
 
   if (!isOpen) return null;
@@ -104,8 +103,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       // fallback
     }
 
-    const phone =
-      phoneTarget === '82' ? STORE_INFO.whatsappPrincipal : STORE_INFO.whatsappSecundario;
+    const phone = STORE_INFO.whatsappPrincipal;
     const message = generateWhatsAppMessage();
     const url = `https://wa.me/${phone}?text=${message}`;
 
@@ -355,36 +353,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
               )}
 
-              {/* Choose WhatsApp destination */}
-              <div className="space-y-1">
-                <label className="text-xs text-purple-300">Enviar para qual WhatsApp?</label>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <button
-                    onClick={() => setPhoneTarget('82')}
-                    className={`p-2 rounded-xl border text-left transition ${
-                      phoneTarget === '82'
-                        ? 'border-emerald-400 bg-emerald-950/60 text-emerald-200'
-                        : 'border-purple-800 bg-purple-900/30 text-purple-300'
-                    }`}
-                  >
-                    <div className="font-bold flex items-center gap-1">
-                      <span>🟢 (82) Principal</span>
-                    </div>
-                    <div className="text-[10px] opacity-75">99648-5515 (Alagoas)</div>
-                  </button>
-
-                  <button
-                    onClick={() => setPhoneTarget('45')}
-                    className={`p-2 rounded-xl border text-left transition ${
-                      phoneTarget === '45'
-                        ? 'border-emerald-400 bg-emerald-950/60 text-emerald-200'
-                        : 'border-purple-800 bg-purple-900/30 text-purple-300'
-                    }`}
-                  >
-                    <div className="font-bold">🟢 (45) Alternativo</div>
-                    <div className="text-[10px] opacity-75">3277-7028</div>
-                  </button>
-                </div>
+              {/* WhatsApp Oficial de Atendimento */}
+              <div className="p-3 rounded-2xl bg-purple-900/60 border border-purple-800 flex items-center justify-between text-xs">
+                <span className="text-purple-300 flex items-center gap-1.5 font-bold">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  WhatsApp Oficial:
+                </span>
+                <span className="font-display font-black text-lime-400">
+                  {STORE_INFO.whatsappFormatado}
+                </span>
               </div>
             </div>
           </div>

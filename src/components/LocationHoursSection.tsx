@@ -109,13 +109,13 @@ export const LocationHoursSection: React.FC = () => {
 
             <div className="space-y-2 text-xs">
               <div className="flex items-center justify-between p-2 rounded-xl bg-purple-950/60 border border-purple-800/60">
-                <span className="text-white font-semibold">Terça a Domingo:</span>
+                <span className="text-white font-semibold">Quarta a Segunda:</span>
                 <span className="text-lime-400 font-bold">15h às 22h</span>
               </div>
 
               <div className="flex items-center justify-between p-2 rounded-xl bg-purple-950/60 border border-purple-800/60">
-                <span className="text-purple-300">Segunda-feira:</span>
-                <span className="text-purple-400 font-medium">Fechado para descanso</span>
+                <span className="text-purple-300">Terça-feira:</span>
+                <span className="text-red-400 font-bold">Fechado</span>
               </div>
 
               <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-200 flex items-start gap-2">
@@ -148,28 +148,28 @@ export const LocationHoursSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-bold text-white font-display text-base">
-                  Telefones & WhatsApp
+                  Telefone & WhatsApp
                 </h3>
-                <span className="text-xs text-emerald-300 font-semibold">Canais de Atendimento</span>
+                <span className="text-xs text-emerald-300 font-semibold">Atendimento Direto</span>
               </div>
             </div>
 
             <div className="space-y-2 text-xs">
               {/* WhatsApp Principal */}
-              <div className="p-2.5 rounded-xl bg-purple-950/80 border border-purple-800/80 space-y-1">
+              <div className="p-3.5 rounded-2xl bg-purple-950/90 border border-purple-800/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-white font-bold flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                    Principal (Alagoas)
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Atendimento Oficial (Alagoas)
                   </span>
                   <a
                     href={`tel:+${STORE_INFO.whatsappPrincipal}`}
-                    className="text-purple-300 hover:text-white underline text-[11px]"
+                    className="text-purple-300 hover:text-white underline text-[11px] font-semibold"
                   >
                     Ligar
                   </a>
                 </div>
-                <div className="text-sm font-black text-lime-400 font-display">
+                <div className="text-base font-black text-lime-400 font-display">
                   {STORE_INFO.whatsappFormatado}
                 </div>
                 <a
@@ -178,38 +178,9 @@ export const LocationHoursSection: React.FC = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-bold hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-bold hover:underline"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" /> Chamar no WhatsApp
-                </a>
-              </div>
-
-              {/* Contato Alternativo */}
-              <div className="p-2.5 rounded-xl bg-purple-950/80 border border-purple-800/80 space-y-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-white font-bold flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                    Alternativo
-                  </span>
-                  <a
-                    href={`tel:+${STORE_INFO.whatsappSecundario}`}
-                    className="text-purple-300 hover:text-white underline text-[11px]"
-                  >
-                    Ligar
-                  </a>
-                </div>
-                <div className="text-sm font-black text-lime-400 font-display">
-                  {STORE_INFO.whatsappSecundarioFormatado}
-                </div>
-                <a
-                  href={`https://wa.me/${STORE_INFO.whatsappSecundario}?text=${encodeURIComponent(
-                    'Olá! Gostaria de fazer um pedido no Açaí + Mais Expresso.'
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-bold hover:underline"
-                >
-                  <MessageCircle className="w-3.5 h-3.5" /> Chamar no WhatsApp
+                  <MessageCircle className="w-4 h-4" /> Chamar no WhatsApp
                 </a>
               </div>
             </div>

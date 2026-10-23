@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-lime-300 font-bold">
-            Terça a Domingo: 15h às 22h
+            Quarta a Segunda: 15h às 22h (Terça: Fechado)
           </div>
         </div>
 

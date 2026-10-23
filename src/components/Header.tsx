@@ -50,9 +50,9 @@ export const Header: React.FC<HeaderProps> = ({
       const weekdayPart = parts.find((p) => p.type === 'weekday')?.value?.toLowerCase() || '';
 
       const hour = hourPart ? parseInt(hourPart, 10) : now.getHours();
-      const isMonday = weekdayPart.includes('seg');
+      const isTuesday = weekdayPart.includes('ter');
 
-      if (!isMonday && hour >= 15 && hour < 22) {
+      if (!isTuesday && hour >= 15 && hour < 22) {
         setIsOpenNow(true);
       } else {
         setIsOpenNow(false);
@@ -67,9 +67,9 @@ export const Header: React.FC<HeaderProps> = ({
     '🌊 PRAIA DO FRANCÊS - AL',
     '🌿 SEM GLÚTEN • SEM LACTOSE • SEM XAROPE',
     '⚡ 100% PURO & SUPER CREMOSO',
-    '⏰ TERÇA A DOMINGO DAS 15H ÀS 22H',
+    '⏰ QUARTA A SEGUNDA DAS 15H ÀS 22H (TERÇA-FEIRA: FECHADO)',
     '🛹 QUIOSQUE NA PRAÇA DO SKATE (AV. CARAVELAS)',
-    '🟢 PEDIDOS WHATSAPP: (82) 99648-5515 & (45) 3277-7028',
+    '🟢 PEDIDOS WHATSAPP: (82) 99648-5515',
     '🔴 PEÇA TAMBÉM PELO IFOOD',
     '⭐ AVALIAÇÃO 4,2 NO GOOGLE',
   ];
@@ -119,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({
                 }`}
               />
               <Clock className="w-3.5 h-3.5" />
-              {isOpenNow ? 'Aberto Agora • Até 22h' : 'Terça a Dom: 15h às 22h'}
+              {isOpenNow ? 'Aberto Agora • Até 22h' : 'Quarta a Seg: 15h às 22h (Terça Fechado)'}
             </span>
 
             <span className="hidden sm:inline-flex text-purple-200 items-center gap-1.5 bg-purple-900/60 px-3 py-1 rounded-full border border-purple-700/60">
@@ -229,7 +229,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
               </div>
               <span className="text-xs font-black bg-white/25 px-2.5 py-1 rounded-xl border border-white/30 shadow-sm">
-                (82) / (45)
+                (82) 99648-5515
               </span>
             </button>
 

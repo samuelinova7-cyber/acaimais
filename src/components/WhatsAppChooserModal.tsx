@@ -8,7 +8,6 @@ interface WhatsAppChooserModalProps {
 }
 
 export const WhatsAppChooserModal: React.FC<WhatsAppChooserModalProps> = ({ isOpen, onClose }) => {
-  const [selectedNumber, setSelectedNumber] = useState<'82' | '45'>('82');
   const [selectedIntent, setSelectedIntent] = useState<string>(
     'Olá! Gostaria de fazer um pedido de açaí expresso.'
   );
@@ -17,8 +16,7 @@ export const WhatsAppChooserModal: React.FC<WhatsAppChooserModalProps> = ({ isOp
   if (!isOpen) return null;
 
   const handleOpenWhatsApp = () => {
-    const phone =
-      selectedNumber === '82' ? STORE_INFO.whatsappPrincipal : STORE_INFO.whatsappSecundario;
+    const phone = STORE_INFO.whatsappPrincipal;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(selectedIntent)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     onClose();
@@ -62,45 +60,25 @@ export const WhatsAppChooserModal: React.FC<WhatsAppChooserModalProps> = ({ isOp
           </button>
         </div>
 
-        {/* Escolha do Número */}
+        {/* Número Oficial */}
         <div className="space-y-2">
           <label className="text-xs font-bold uppercase tracking-wider text-lime-400 font-display">
-            1. Selecione o Número de Contato:
+            WhatsApp Oficial de Atendimento:
           </label>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <button
-              onClick={() => setSelectedNumber('82')}
-              className={`p-3 rounded-2xl border text-left transition-all ${
-                selectedNumber === '82'
-                  ? 'border-emerald-400 bg-emerald-950/60 ring-1 ring-emerald-400'
-                  : 'border-purple-800 bg-purple-900/30 hover:border-purple-700'
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-white">Principal (Alagoas)</span>
-                <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">
-                  Recomendado
-                </span>
-              </div>
-              <div className="text-sm font-black text-lime-300 font-display mt-1">
-                {STORE_INFO.whatsappFormatado}
-              </div>
-            </button>
-
-            <button
-              onClick={() => setSelectedNumber('45')}
-              className={`p-3 rounded-2xl border text-left transition-all ${
-                selectedNumber === '45'
-                  ? 'border-emerald-400 bg-emerald-950/60 ring-1 ring-emerald-400'
-                  : 'border-purple-800 bg-purple-900/30 hover:border-purple-700'
-              }`}
-            >
-              <span className="text-xs font-bold text-white">Alternativo</span>
-              <div className="text-sm font-black text-lime-300 font-display mt-1">
-                {STORE_INFO.whatsappSecundarioFormatado}
-              </div>
-            </button>
+          <div className="p-3.5 rounded-2xl border-2 border-emerald-400 bg-emerald-950/70 text-left shadow-lg">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-white flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                Açaí + Mais Expresso (Alagoas)
+              </span>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 font-bold">
+                Online
+              </span>
+            </div>
+            <div className="text-base font-black text-lime-300 font-display mt-1">
+              {STORE_INFO.whatsappFormatado}
+            </div>
           </div>
         </div>
 

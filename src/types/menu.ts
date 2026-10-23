@@ -41,5 +41,5 @@ export interface CustomerOrder {
   address?: string;
   paymentMethod: 'pix' | 'cartao' | 'dinheiro';
   needChange?: string;
-  phoneContact: '82' | '45';
+  phoneContact?: '82';
 }

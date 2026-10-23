@@ -12,8 +12,6 @@ export const STORE_INFO = {
   ],
   whatsappPrincipal: '5582996485515',
   whatsappFormatado: '(82) 99648-5515',
-  whatsappSecundario: '554532777028',
-  whatsappSecundarioFormatado: '(45) 3277-7028',
   ifoodUrl: 'https://acaimais.com',
   instagramHandle: 'acaimaisfran6',
   instagramUrl: 'https://instagram.com/acaimaisfran6',
@@ -21,7 +19,7 @@ export const STORE_INFO = {
   googleReviewCount: 6,
   googleMapsUrl: 'https://maps.google.com/?q=Praça+do+Skate+Av+Caravelas+Praia+do+Frances+Marechal+Deodoro+AL',
   address: 'Praça do Skate – Av. Caravelas, R. Caravelas - Praia do Francês, Mal. Deodoro - AL, 57160-000',
-  scheduleNotice: 'Terça a Domingo: 15h às 22h (Segunda: Fechado)',
+  scheduleNotice: 'Quarta a Segunda: 15h às 22h (Terça-feira: Fechado)',
   logoUrl: 'https://res.cloudinary.com/dbuiqh0ee/image/upload/v1791933174/WhatsApp_Image_2026-10-13_at_8.05.08_PM_mqyndl.jpg',
 };
 
