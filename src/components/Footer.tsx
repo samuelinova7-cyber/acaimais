@@ -76,8 +76,11 @@ export const Footer: React.FC = () => {
           <p className="flex items-center justify-center gap-1">
             Feito com <Heart className="w-3.5 h-3.5 text-pink-500 fill-pink-500" /> para os amantes de açaí cremoso na Praia do Francês!
           </p>
+          <p className="text-xs font-semibold text-lime-300">
+            Não tem glúten • Nem lactose • Nem xarope • Banana substitui o açúcar! 🍌
+          </p>
           <p className="text-[11px] opacity-75">
-            Sem Glúten • Sem Lactose • Sem Xarope • 100% Puro & Artesanal
+            100% Puro, Artesanal & Super Cremoso na Praia do Francês
           </p>
         </div>
       </div>

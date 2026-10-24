@@ -50,8 +50,9 @@ export const MenuVideoSection: React.FC<{ onOpenWhatsApp: () => void }> = ({ onO
         {/* Video Element */}
         <div className="relative aspect-video w-full max-h-[75vh] flex items-center justify-center bg-black">
           <video
+            key="acai-commercial-video"
             ref={videoRef}
-            src="https://res.cloudinary.com/dbuiqh0ee/video/upload/v1791931284/Menu_digital_com_a%C3%A7a%C3%AD_20261013193625_alw1bm.mp4"
+            src="https://res.cloudinary.com/hd1sahto/video/upload/v1792792130/Acai_menu_commercial_animation_20261023184808.mp4"
             autoPlay
             loop
             muted

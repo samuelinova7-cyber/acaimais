@@ -42,7 +42,7 @@ export const GoogleReviewsSection: React.FC = () => {
 
         {/* Action Button: Avaliar no Google */}
         <a
-          href={STORE_INFO.googleMapsUrl}
+          href={STORE_INFO.googleReviewUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-purple-950 font-black text-xs uppercase tracking-wider font-display shadow-lg shadow-amber-900/30 active:scale-95 transition-all self-start sm:self-auto cursor-pointer"
@@ -88,7 +88,7 @@ export const GoogleReviewsSection: React.FC = () => {
         </div>
 
         <a
-          href={STORE_INFO.googleMapsUrl}
+          href={STORE_INFO.googleReviewUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto text-center px-5 py-3 rounded-2xl bg-purple-800 hover:bg-purple-700 text-white font-bold text-xs uppercase tracking-wider font-display border border-purple-600 transition flex items-center justify-center gap-2"

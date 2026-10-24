@@ -69,7 +69,7 @@ export const MinigameBuilder: React.FC<MinigameBuilderProps> = ({
 
     const steps = [
       { p: 25, text: '❄️ Resfriando açaí super cremoso a -4°C...' },
-      { p: 55, text: '🌿 Removendo 100% de xarope, glúten e lactose...' },
+      { p: 55, text: '🍌 Banana substitui o açúcar! Sem glúten, sem lactose e sem xarope...' },
       { p: 85, text: '✨ Carregando acompanhamentos da Praia do Francês...' },
       { p: 100, text: '🎮 100% PRONTO! VAMOS MONTAR O AÇAÍ!' },
     ];
@@ -260,6 +260,13 @@ export const MinigameBuilder: React.FC<MinigameBuilderProps> = ({
             <p className="text-xs sm:text-sm text-purple-200">
               Passe pelas 3 fases: escolha seu copo, desbloqueie acompanhamentos deliciosos e finalize com sua calda mágica!
             </p>
+
+            <div className="pt-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-purple-900/80 border-2 border-lime-400/60 text-xs sm:text-sm text-lime-300 font-black shadow-lg">
+                <span>🍌</span>
+                <span>Não tem glúten nem lactose nem xarope • Banana substitui o açúcar!</span>
+              </div>
+            </div>
           </div>
 
           {/* O GRANDE BOTÃO START GAME */}

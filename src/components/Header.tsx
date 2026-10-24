@@ -65,8 +65,9 @@ export const Header: React.FC<HeaderProps> = ({
   const marqueeItems = [
     '🟣 AÇAÍ + MAIS EXPRESSO',
     '🌊 PRAIA DO FRANCÊS - AL',
-    '🌿 SEM GLÚTEN • SEM LACTOSE • SEM XAROPE',
-    '⚡ 100% PURO & SUPER CREMOSO',
+    '🍌 BANANA SUBSTITUI O AÇÚCAR (100% NATURAL)',
+    '🌿 NÃO TEM GLÚTEN NEM LACTOSE NEM XAROPE',
+    '⚡ SUPER CREMOSO & ARTESANAL',
     '⏰ QUARTA A SEGUNDA DAS 15H ÀS 22H (TERÇA-FEIRA: FECHADO)',
     '🛹 QUIOSQUE NA PRAÇA DO SKATE (AV. CARAVELAS)',
     '🟢 PEDIDOS WHATSAPP: (82) 99648-5515',
@@ -196,6 +197,15 @@ export const Header: React.FC<HeaderProps> = ({
             <p className="text-sm sm:text-base text-purple-100 font-medium italic max-w-xl drop-shadow">
               "{STORE_INFO.slogan}"
             </p>
+
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-lime-400/25 text-lime-300 border border-lime-400/50 text-xs font-black tracking-wide font-display shadow-md">
+                <span>🍌</span> Banana substitui o açúcar
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-purple-900/80 text-purple-200 border border-purple-700/80 text-xs font-bold shadow-md">
+                Sem Glúten • Sem Lactose • Sem Xarope
+              </span>
+            </div>
           </div>
         </div>
 
